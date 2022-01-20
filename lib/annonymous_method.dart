@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new AnonMethode());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class AnonMethode extends StatefulWidget {
+  const AnonMethode({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _AnonMethode createState() => _AnonMethode();
 }
 
-class _MyAppState extends State<MyApp> {
+class _AnonMethode extends State<AnonMethode> {
   String message = ' Ini Adalah Text';
   void pressedButton() {
     setState(() {
@@ -25,14 +25,23 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Anonymous Methode'),
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(message), 
+              Text(message),
               RaisedButton(
-                onPressed: (){
+                onPressed: () {
                   setState(() {
                     message = 'Ini Dari Anonymous func';
                   });

@@ -2,23 +2,32 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new FlexibleLayout());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class FlexibleLayout extends StatefulWidget {
+  const FlexibleLayout({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _FlaxibleLayout createState() => _FlaxibleLayout();
 }
 
-class _MyAppState extends State<MyApp> {
+class _FlaxibleLayout extends State<FlexibleLayout> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
               title: Text('Flexible Layout'),
+              leading: IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
             body: Column(
               children: <Widget>[

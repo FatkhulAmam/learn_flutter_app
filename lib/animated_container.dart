@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new AnimatedContainerWidget());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class AnimatedContainerWidget extends StatefulWidget {
+  const AnimatedContainerWidget({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _AnimatedContainerWidget createState() => _AnimatedContainerWidget();
 }
 
-class _MyAppState extends State<MyApp> {
+class _AnimatedContainerWidget extends State<AnimatedContainerWidget> {
   Random random = Random();
 
   @override
@@ -21,6 +21,15 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
             appBar: AppBar(
               title: Text('Animated Container'),
+              leading: IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
             body: Center(
                 child: GestureDetector(

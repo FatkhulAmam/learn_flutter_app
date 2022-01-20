@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new Dragable());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class Dragable extends StatefulWidget {
+  const Dragable({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _Dragable createState() => _Dragable();
 }
 
-class _MyAppState extends State<MyApp> {
+class _Dragable extends State<Dragable> {
   Color colorOne = Colors.red;
   Color colorTwo = Colors.amber;
   Color colorThree = Colors.greenAccent;
@@ -24,6 +24,15 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
       appBar: AppBar(
         title: Text('Dragable'),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

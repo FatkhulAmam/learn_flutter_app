@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new LearnStateFull());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class LearnStateFull extends StatefulWidget {
+  const LearnStateFull({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _LearnStateFullWidget createState() => _LearnStateFullWidget();
 }
 
-class _MyAppState extends State<MyApp> {
+class _LearnStateFullWidget extends State<LearnStateFull> {
   int number = 10;
   void increaseNumber() {
     setState(() {
@@ -31,7 +31,18 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Statefull widget'),),
+        appBar: AppBar(
+          title: Text('Statefull widget'),
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

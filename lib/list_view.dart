@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new ListViewPage());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class ListViewPage extends StatefulWidget {
+  const ListViewPage({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _ListView createState() => _ListView();
 }
 
-class _MyAppState extends State<MyApp> {
+class _ListView extends State<ListViewPage> {
   List<Widget> widgets = [];
   int counter = 1;
 
@@ -21,6 +21,15 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
             appBar: AppBar(
               title: Text('List View'),
+              leading: IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
             body: ListView(
               children: <Widget>[

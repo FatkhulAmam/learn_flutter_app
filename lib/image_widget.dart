@@ -2,17 +2,28 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new ImageWidget());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+class ImageWidget extends StatelessWidget {
+  const ImageWidget({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Image Widget')),
+        appBar: AppBar(
+          title: Text('Image Widget'),
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

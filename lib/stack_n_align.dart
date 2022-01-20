@@ -2,23 +2,32 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main(List<String> args) {
-  runApp(new MyApp());
+  runApp(new StackNalign());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class StackNalign extends StatefulWidget {
+  const StackNalign({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _StackNalign createState() => _StackNalign();
 }
 
-class _MyAppState extends State<MyApp> {
+class _StackNalign extends State<StackNalign> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
         title: Text('Stack & Align'),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Stack(
         children: <Widget>[
