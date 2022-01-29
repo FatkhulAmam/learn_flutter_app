@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main(List<String> args) {
-  runApp(new SpacerWidget());
-}
 
 class SpacerWidget extends StatelessWidget {
   const SpacerWidget({Key key}) : super(key: key);

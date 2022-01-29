@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main(List<String> args) {
-  runApp(new ImageWidget());
-}
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({Key key}) : super(key: key);

@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main(List<String> args) {
-  runApp(new FlexibleLayout());
-}
 
 class FlexibleLayout extends StatefulWidget {
   const FlexibleLayout({Key key}) : super(key: key);

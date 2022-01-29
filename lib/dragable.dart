@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main(List<String> args) {
-  runApp(new Dragable());
-}
 
 class Dragable extends StatefulWidget {
   const Dragable({Key key}) : super(key: key);

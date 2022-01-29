@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-void main(List<String> args) {
-  runApp(new AnimatedContainerWidget());
-}
-
 class AnimatedContainerWidget extends StatefulWidget {
   const AnimatedContainerWidget({Key key}) : super(key: key);
 

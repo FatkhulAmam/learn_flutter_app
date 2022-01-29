@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main(List<String> args) {
-  runApp(new StackNalign());
-}
 
 class StackNalign extends StatefulWidget {
   const StackNalign({Key key}) : super(key: key);

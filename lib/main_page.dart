@@ -1,15 +1,20 @@
 import 'package:first_app/animated_container.dart';
 import 'package:first_app/annonymous_method.dart';
+import 'package:first_app/card_component.dart';
 import 'package:first_app/container.dart';
 import 'package:first_app/dragable.dart';
 import 'package:first_app/flexible_layout.dart';
+import 'package:first_app/hero_n_cliprrect.dart';
 import 'package:first_app/image_widget.dart';
+import 'package:first_app/inkwell.dart';
 import 'package:first_app/list_view.dart';
+import 'package:first_app/media_query.dart';
 import 'package:first_app/specer_widget.dart';
 import 'package:first_app/stack_n_align.dart';
 import 'package:first_app/statefull_widget.dart';
+import 'package:first_app/tab_bar.dart';
 import 'package:first_app/text.dart';
-import 'package:flutter/gestures.dart';
+import 'package:first_app/text_field_component.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -22,7 +27,7 @@ class MainPage extends StatelessWidget {
         title: Text('Main page'),
       ),
       body: Container(
-    padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(10.0),
         child: ListView(
           children: <Widget>[
             Container(
@@ -269,7 +274,7 @@ class MainPage extends StatelessWidget {
               width: double.infinity,
               height: 50.0,
               child: OutlineButton(
-                child: Text('Anonymous Methode',
+                child: Text('Card Component',
                     style: TextStyle(color: Colors.black)),
                 borderSide: BorderSide(
                   color: Colors.black,
@@ -280,7 +285,7 @@ class MainPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AnonMethode(),
+                      builder: (context) => CardComponent(),
                     ),
                   );
                 },
@@ -291,7 +296,7 @@ class MainPage extends StatelessWidget {
               width: double.infinity,
               height: 50.0,
               child: OutlineButton(
-                child: Text('Anonymous Methode',
+                child: Text('Text Field Component',
                     style: TextStyle(color: Colors.black)),
                 borderSide: BorderSide(
                   color: Colors.black,
@@ -302,7 +307,7 @@ class MainPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AnonMethode(),
+                      builder: (context) => TextFieldComponent(),
                     ),
                   );
                 },
@@ -313,8 +318,10 @@ class MainPage extends StatelessWidget {
               width: double.infinity,
               height: 50.0,
               child: OutlineButton(
-                child: Text('Anonymous Methode',
-                    style: TextStyle(color: Colors.black)),
+                child: Text(
+                  'Media Query Component',
+                  style: TextStyle(color: Colors.black),
+                ),
                 borderSide: BorderSide(
                   color: Colors.black,
                   style: BorderStyle.solid,
@@ -324,7 +331,79 @@ class MainPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AnonMethode(),
+                      builder: (context) => MediaQueryComponent(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Make Button use Inkwell',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => InkwellComponent(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Hero n ClipRRect',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HeroClipRRect(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Tab Bar',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TabbarComponent(),
                     ),
                   );
                 },
