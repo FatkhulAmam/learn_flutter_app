@@ -1,4 +1,5 @@
 import 'package:first_app/animated_container.dart';
+import 'package:first_app/animated_padding.dart';
 import 'package:first_app/annonymous_method.dart';
 import 'package:first_app/api_demo.dart';
 import 'package:first_app/audio_player.dart';
@@ -15,6 +16,7 @@ import 'package:first_app/list_view.dart';
 import 'package:first_app/media_query.dart';
 import 'package:first_app/qr_code.dart';
 import 'package:first_app/rhombus_button.dart';
+import 'package:first_app/shared_preferences.dart';
 import 'package:first_app/specer_widget.dart';
 import 'package:first_app/stack_n_align.dart';
 import 'package:first_app/statefull_widget.dart';
@@ -579,6 +581,54 @@ class MainPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SwitchNanimatedSwitcher(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Animated Padding',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AnimatedWidgetView(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Sharred Preferences',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SharedPreferencesView(),
                     ),
                   );
                 },
