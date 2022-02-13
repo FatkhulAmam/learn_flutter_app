@@ -14,6 +14,8 @@ import 'package:first_app/image_widget.dart';
 import 'package:first_app/inkwell.dart';
 import 'package:first_app/list_view.dart';
 import 'package:first_app/media_query.dart';
+import 'package:first_app/multi_provider.dart';
+import 'package:first_app/provider_view.dart';
 import 'package:first_app/qr_code.dart';
 import 'package:first_app/rhombus_button.dart';
 import 'package:first_app/shared_preferences.dart';
@@ -629,6 +631,54 @@ class MainPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SharedPreferencesView(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Provider State Mnagement',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProviderView(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: 50.0,
+              child: OutlineButton(
+                child: Text(
+                  'Multi Provider',
+                  style: TextStyle(color: Colors.black),
+                ),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  style: BorderStyle.solid,
+                  width: 1,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MultiProviderView(),
                     ),
                   );
                 },
